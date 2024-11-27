@@ -14,7 +14,7 @@
     "stylelint-config-standard-scss": "^9.0.0"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets --minify",
+    "build": "node api.js && esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets --minify",
     "build-dev": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
     "build:css": "sass app/assets/stylesheets/application.scss:app/assets/builds/application.css --no-source-map --style=compressed",
     "build-dev:css": "sass app/assets/stylesheets/application.scss:app/assets/builds/application.css --no-source-map"
